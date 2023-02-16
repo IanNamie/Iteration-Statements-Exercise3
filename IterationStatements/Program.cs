@@ -39,6 +39,12 @@ namespace IterationStatements
             EvenOrOddChecker();
             Console.WriteLine($"PosOrNegChecker");
             PosOrNegChecker();
+            Console.WriteLine($"AgeChecker");
+            AgeChecker();
+            Console.WriteLine($"TheTenCheck");
+            TheTenCheck();
+            Console.WriteLine($"MultiplcationTable");
+            MultiplicationTable();
             Console.WriteLine($"");
         }
         public static void NumberIndex()
@@ -105,8 +111,57 @@ namespace IterationStatements
             }
             else 
             { 
-                Console.WriteLine($"that woudl be a postive number! Great Job");
+                Console.WriteLine($"that would be a postive number! Great Job");
             }
         }
+        public static void AgeChecker()
+        { 
+            Console.WriteLine($"I want to see if you are old enough to vote! How old are you?");
+        var userAge =int.Parse(Console.ReadLine());
+            if (userAge >= 18)
+            { 
+                Console.WriteLine($"Ohhh congradulations you can definetly vote, better yet here is your senior citizen card!");
+            }
+            else
+            {
+                Console.WriteLine($"Ohh sorry youngin, go get you a kids meal you aren't old enough!");
+            }
+
+        }
+        public static void TheTenCheck()
+        {
+            //Write a method to check if an integer(from the user) is in the range -10 to 10
+            Console.WriteLine($"You pick a number and I will tell you if it is in range or not!");
+            var usersnumber = int.Parse(Console.ReadLine());
+            var negNum = -10;
+            var posNum = 10;
+            if (usersnumber <= posNum && usersnumber >= negNum)
+            {
+                Console.WriteLine($"hey thats right in my range good job!");
+            } else
+            {
+                Console.WriteLine($"Woah that number is highier than my range, good guess tho!");
+            }
+        }
+        public static void MultiplicationTable()
+        {//Write a method to display the multiplication table(from 1 to 12) of a given integer
+           Console.WriteLine($"What number would you like to see multiplyed?");
+            var usernum = int.Parse(Console.ReadLine());
+            Console.WriteLine($"I really like the number {usernum}!");
+            for (var num = 1; num <= 12; num++) 
+            {
+               Console.WriteLine(multiply(num, usernum));
+            }
+           
+        }
+        public static int multiply(int num1, int num2)
+        { return num1 * num2; }
+
+
+
+
+
+
+
     }
 }
