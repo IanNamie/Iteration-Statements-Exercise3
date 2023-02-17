@@ -34,17 +34,17 @@ namespace IterationStatements
             Console.WriteLine("ByThree");
             ByThrees();
             Console.WriteLine($"NumChecker");
-            NumChecker();
+            NumChecker(7,8);
             Console.WriteLine($"EvenOrOddChecker");
-            EvenOrOddChecker();
+            EvenOrOddChecker(15,14);
             Console.WriteLine($"PosOrNegChecker");
-            PosOrNegChecker();
+            PosOrNegChecker(15,0);
             Console.WriteLine($"AgeChecker");
-            AgeChecker();
+            AgeChecker(18);
             Console.WriteLine($"TheTenCheck");
-            TheTenCheck();
+            TheTenCheck(-5);
             Console.WriteLine($"MultiplcationTable");
-            MultiplicationTable();
+            MultiplicationTable(2);
             Console.WriteLine($"");
         }
         public static void NumberIndex()
@@ -62,29 +62,23 @@ namespace IterationStatements
             }
 
         }
-        public static void NumChecker()
+        public static void NumChecker(int a, int b)
         {
-            Console.WriteLine(" were gonna see if some numbers are the same! What is your first number?");
-            var user1stImput = Console.ReadLine();
-            Console.WriteLine("What is your second number?");
-            var user2stImput = Console.ReadLine();
-            if (user1stImput != user2stImput)
+            
+            if (a != b)
             {
-                Console.WriteLine("Nice try those are not the same!");
+                Console.WriteLine(false);
             }
             else
             {
-                Console.WriteLine(" Nice Job! they are the same!");
+                Console.WriteLine(true);
             }
 
         }
-        public static void EvenOrOddChecker()
+        public static void EvenOrOddChecker(int a, int b)
         {
-            Console.WriteLine($"what is the first number you would like to enter?");
-            var num1 = int.Parse(Console.ReadLine());
-            Console.WriteLine($"what is the second number you would like to enter?");
-            var num2 = int.Parse(Console.ReadLine());
-            if (num1 % 2 == 0)
+            
+            if (a % 2 == 0)
             {
                 Console.WriteLine($"Your first number is a postive number!");
             }
@@ -92,7 +86,7 @@ namespace IterationStatements
             {
                 Console.WriteLine($"Your first number is a odd number!");
             }
-            if (num2 % 2== 0)
+            if (b % 2== 0)
             {
                 Console.WriteLine($"Your second number is even!");
             }
@@ -102,11 +96,11 @@ namespace IterationStatements
 
             }
         }
-        public static void PosOrNegChecker()
+        public static void PosOrNegChecker(int a, int b)
         {
             Console.WriteLine($"We are going to check if a number is Negative or positive. What number would you like to try?");
-            var posOrNegNum = int.Parse(Console.ReadLine());
-            if (posOrNegNum < 0)
+            
+            if (a < b)
             { Console.WriteLine($"that would be a negative number! Nice job!");
             }
             else 
@@ -114,10 +108,9 @@ namespace IterationStatements
                 Console.WriteLine($"that would be a postive number! Great Job");
             }
         }
-        public static void AgeChecker()
+        public static void AgeChecker(int userAge)
         { 
-            Console.WriteLine($"I want to see if you are old enough to vote! How old are you?");
-        var userAge =int.Parse(Console.ReadLine());
+          
             if (userAge >= 18)
             { 
                 Console.WriteLine($"Ohhh congradulations you can definetly vote, better yet here is your senior citizen card!");
@@ -128,11 +121,10 @@ namespace IterationStatements
             }
 
         }
-        public static void TheTenCheck()
+        public static void TheTenCheck(int userNum)
         {
             //Write a method to check if an integer(from the user) is in the range -10 to 10
-            Console.WriteLine($"You pick a number and I will tell you if it is in range or not!");
-            var usersnumber = int.Parse(Console.ReadLine());
+            
             var negNum = -10;
             var posNum = 10;
             if (usersnumber <= posNum && usersnumber >= negNum)
@@ -143,14 +135,13 @@ namespace IterationStatements
                 Console.WriteLine($"Woah that number is highier than my range, good guess tho!");
             }
         }
-        public static void MultiplicationTable()
+        public static void MultiplicationTable(int a)
         {//Write a method to display the multiplication table(from 1 to 12) of a given integer
            Console.WriteLine($"What number would you like to see multiplyed?");
-            var usernum = int.Parse(Console.ReadLine());
-            Console.WriteLine($"I really like the number {usernum}!");
+            
             for (var num = 1; num <= 12; num++) 
             {
-               Console.WriteLine(multiply(num, usernum));
+               Console.WriteLine(multiply(num, a));
             }
            
         }
