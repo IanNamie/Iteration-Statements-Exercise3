@@ -127,7 +127,7 @@ namespace IterationStatements
             
             var negNum = -10;
             var posNum = 10;
-            if (usersnumber <= posNum && usersnumber >= negNum)
+            if (userNum <= posNum && userNum >= negNum)
             {
                 Console.WriteLine($"hey thats right in my range good job!");
             } else
